@@ -1,0 +1,14 @@
+.hero{
+    background-image: url("../img/1897162f84.png");
+    background-position: center;
+    background-size: cover;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.login{
+    z-index: 1;
+}

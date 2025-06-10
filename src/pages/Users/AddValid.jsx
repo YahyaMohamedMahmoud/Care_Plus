@@ -9,14 +9,14 @@ export default function AddValid({onClose , singleID}) {
     function handleClose(){
         onClose();
     }
+
     const [validDate, setValidDateState] = useState('');
     const dispatch = useDispatch();
+    
     const { loading , errors} = useSelector(
         (state) => state.users
       );
       
-      
-
       const handleSubmit = (e) => {
         e.preventDefault();
         if (validDate > new Date().toISOString().split('T')[0]) {

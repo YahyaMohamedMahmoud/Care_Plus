@@ -1,6 +1,7 @@
 import MainCard from "./Dashboard/MainCard";
 import Chart from "./Dashboard/Chart";
 import AboutUsers from "./Dashboard/AboutUsers";
+import AboutCard from "./Dashboard/AboutCard";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchDashboardData } from "../Store/Dashboard/dashboard";
@@ -27,7 +28,7 @@ const Dashboard = () => {
       </div>
       <div className="chart grid grid-cols-2 gap-2 my-3">
         <AboutUsers data={data}/>
-        
+        <AboutCard data={data}/>
       </div>
     </div>
   );

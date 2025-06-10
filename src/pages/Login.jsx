@@ -26,6 +26,7 @@ const Login = () => {
     const { name, value, type, checked } = e.target;
     setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
   
@@ -39,6 +40,8 @@ const Login = () => {
       toast.error("An unexpected error occurred");
     }
   };
+
+  
   return (
     <section className="hero w-full relative overflow-hidden">
 

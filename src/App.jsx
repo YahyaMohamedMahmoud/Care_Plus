@@ -14,9 +14,12 @@ const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Home = React.lazy(() => import("./pages/Home"));
 const Offers = React.lazy(() => import("./pages/Offers/Offers"));
 const Users = React.lazy(() => import("./pages/Users/Users"));
+const Reports = React.lazy(() => import("./pages/Reports/Reports"));
 const Teams = React.lazy(() => import("./pages/Teams/Teams"));
 const AddTeamTarget = React.lazy(() => import("./pages/Teams/AddTeamTarget"));
+const Cards = React.lazy(() => import("./pages/Cards/Cards"));
 const Vendors = React.lazy(() => import("./pages/Vendors/Vendors"));
+const Invoice = React.lazy(() => import("./pages/Invoices/Invoices"));
 const Area = React.lazy(() => import("./pages/Area/Area"));
 const Slider = React.lazy(() => import("./pages/Silder/Slider"));
 
@@ -72,6 +75,14 @@ function App() {
                 </Suspense>
               }
             />
+            <Route
+              path="reports"
+              element={
+                <Suspense fallback={<Loader/>}>
+                  <Reports />
+                </Suspense>
+              }
+            />
 
             {/* Nested Routes for Teams */}
             <Route
@@ -91,7 +102,15 @@ function App() {
                 }
               />
             </Route>
-  
+
+               <Route
+              path="cards"
+              element={
+                <Suspense fallback={<Loader/>}>
+                  <Cards />
+                </Suspense>
+              }
+            />   
                <Route
               path="vendors"
               element={
@@ -99,7 +118,15 @@ function App() {
                   <Vendors />
                 </Suspense>
               }
-            />    
+            />   
+               <Route
+              path="invoice"
+              element={
+                <Suspense fallback={<Loader/>}>
+                  <Invoice />
+                </Suspense>
+              }
+            />   
                <Route
               path="area"
               element={

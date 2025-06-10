@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchAdmins } from '../../Store/Teams/teams';
 
 export default function Teams() {
+
   const [search, setSearch] = useState('');
   const location = useLocation();
   const isAddTeamRoute = location.pathname === '/teams/addteam';
@@ -24,6 +25,8 @@ export default function Teams() {
     }); 
     return () => clearTimeout(handler);
   }, [search, dispatch]); 
+
+  
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
@@ -51,8 +54,6 @@ export default function Teams() {
         <Link to="/teams/addteam" className="px-11 py-3 text-sm text-white bg-[#2697E0] rounded-md font-medium">
           New User Member
         </Link>
-
-
 
         </div>
 

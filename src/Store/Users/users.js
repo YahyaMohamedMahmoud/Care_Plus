@@ -26,7 +26,7 @@ export const fetchUsers = createAsyncThunk(
       return {
         users: data.data.data,
         currentPage: data.data.current_page,
-        totalPages: data.data.last_page,  // Assuming last_page is the total pages
+        totalPages: data.data.last_page,
       };
       
     } catch (error) {
@@ -66,7 +66,6 @@ export const setValidDate = createAsyncThunk(
   }
 );
 
-// Create a slice to handle user state
 const usersSlice = createSlice({
   name: 'users',
   initialState: {
@@ -101,6 +100,7 @@ const usersSlice = createSlice({
       .addCase(setValidDate.fulfilled, (state, action) => {
         state.loading = false;
         state.data = action.payload;
+ 
       })
       .addCase(setValidDate.rejected, (state, action) => {
         state.loading = false;

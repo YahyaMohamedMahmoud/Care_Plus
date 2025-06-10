@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function AddTeamTarget() {
   const navigate = useNavigate();
+  
   const schema = z.object({
     first_name: z.string().min(1, { message: "First name is required" }),
     last_name: z.string().min(1, { message: "Last name is required" }),
@@ -24,6 +25,7 @@ export default function AddTeamTarget() {
     .refine(file => file && file.type.match(/image\/(jpeg|png|jpg|gif|svg)/))
     .optional(),
   });
+
   const dispatch = useDispatch();
   const [imageUploaded, setImageUploaded] = useState(false);
   const [imagePreview, setImagePreview] = useState(null); 

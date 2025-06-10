@@ -45,7 +45,6 @@ export default function Chart({data}) {
             show: true,
             label: "Total Offer",
             formatter: function () {
-              // Return the sum of all series values
               return seriesData.reduce((acc, val) => val, 0);
             },
           },

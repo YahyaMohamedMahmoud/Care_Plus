@@ -39,8 +39,6 @@ export default function Users() {
         params.set(key, value);
       }
     });
-
-    // Navigate to the new URL with updated filters and page
     navigate({
       pathname: location.pathname,
       search: params.toString(),

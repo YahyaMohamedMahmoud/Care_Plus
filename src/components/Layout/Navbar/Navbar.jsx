@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
+  
   useEffect(() => {
     const storedUser = localStorage.getItem("admin");
     if (storedUser) {
